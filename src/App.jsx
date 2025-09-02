@@ -36,7 +36,8 @@ function App() {
           <h1>Start Quiz</h1>
           <div className='category-group'>
             <label>
-              <input 
+              <input
+                className='category-input'
                 type='radio'
                 name='category'
                 value='18'
@@ -45,7 +46,8 @@ function App() {
               Computer Science
             </label>
             <label>
-              <input 
+              <input
+                className='category-input'
                 type='radio'
                 name='category'
                 value='19'
@@ -54,7 +56,8 @@ function App() {
               Math
             </label>
             <label>
-              <input 
+              <input
+                className='category-input'
                 type='radio'
                 name='category'
                 value='9'
@@ -63,13 +66,34 @@ function App() {
               General Knowledge
             </label>
             <label>
-              <input 
+              <input
+                className='category-input'
                 type='radio'
                 name='category'
                 value='17'
                 onChange={(e)=>setCategory(e.target.value)}
               />
               Science
+            </label>
+            <label>
+              <input
+                className='category-input'
+                type='radio'
+                name='category'
+                value='20'
+                onChange={(e)=>setCategory(e.target.value)}
+              />
+              Geography
+            </label>
+            <label>
+              <input
+                className='category-input'
+                type='radio'
+                name='category'
+                value='21'
+                onChange={(e)=>setCategory(e.target.value)}
+              />
+              History
             </label>
           </div>
           <h2>Total Questions : 10</h2>
@@ -79,8 +103,10 @@ function App() {
         </div>
       )}
       {countdown && (
-        <div className='count-down'>
-          {count}
+        <div className='count-down-container'>
+          <div className='count-down'>
+            <p className='count'>{count}</p>
+          </div>
         </div>
       )}
     </div>
