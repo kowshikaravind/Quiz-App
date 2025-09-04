@@ -2,9 +2,8 @@ import React, { useEffect, useState } from 'react';
 
 function Questions({ questiondata, onAnswer }) {
   const { question, correct_answer, incorrect_answers } = questiondata;
-  const [allAnswers, setAllAnswers] = useState([]); 
+  const [allAnswers, setAllAnswers] = useState([]);
   const [selectedAnswer, setSelectedAnswer] = useState('');
-  const [answered, setAnswered] = useState(false);
 
   useEffect(() => {
     const opts = [
@@ -14,24 +13,18 @@ function Questions({ questiondata, onAnswer }) {
 
     setAllAnswers(opts);
     setSelectedAnswer('');
-    setAnswered(false);
   }, [questiondata]);
 
   function handleChoice(opt) {
     setSelectedAnswer(opt.text);
-
-    if (!answered) {
-      setAnswered(true);
-      if (typeof onAnswer === 'function') {
-        onAnswer(opt.isCorrect);
-      }
+    if (typeof onAnswer === 'function') {
+      onAnswer(opt.isCorrect);
     }
   }
 
   return (
     <div className="question-box">
       <h3 dangerouslySetInnerHTML={{ __html: question }} />
-
       <div className="answers-list">
         {allAnswers.map((opt, i) => (
           <div key={i} className={`answer-option ${selectedAnswer === opt.text ? 'selected' : ''}`}>

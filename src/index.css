@@ -73,20 +73,25 @@ h1{
   height:500px;
   margin-top:70px;
 }
-.category-group{
+.category-group {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.category-group label {
+  display: flex;
   align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-.category-input{
-  margin-right:10px;
-  accent-color: skyblue;
+  font-size: 18px;
   cursor: pointer;
-  
 }
+
+.category-input {
+  margin-right: 10px;
+  transform: scale(1.2);
+}
+
 .user-outer-box{
   display: flex;
   justify-content: center;
@@ -211,4 +216,43 @@ h1{
   border: none;
   border-radius: 5px;
   font-weight: 700;
+}
+.Login-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  margin-top:50px;
+}
+.login-email{
+  padding:10px;
+  width:300px;
+  margin:10px;
+}
+.login-password{
+  padding:10px;
+  width:300px;
+  margin:10px;
+}
+.login-button{
+  padding:10px;
+  width:100px;
+  background-color: lightgreen;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+}
+.login-button:hover{
+  background: linear-gradient(to right, white, lightgreen);
+  transform: scale(1.1);
+  box-shadow: 0 0 10px 0.3px pink ,2
+  2px 2px 30px 1px white;
+  transition: all 0.3s ease-in-out;
+  border-width: 3px;
+  border-color:white lightgreen;
+}
+.login-to-register{
+  color: lightblue;
+  cursor: pointer;
 }
