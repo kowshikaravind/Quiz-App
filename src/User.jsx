@@ -31,7 +31,7 @@ function User() {
           alert(data.message || "Registration failed.");
         }
       } catch (err) {
-        alert("Server error. Please try again later.");
+        alert("Server error. Please try again later.", err);
         console.error("Error registering:", err);
       }
     }
