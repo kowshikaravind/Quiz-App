@@ -43,7 +43,7 @@ function Home() {
           <button className='head-btn' onClick={() => navigate('/DailyChallenge')}>Daily Challenge</button>
         </div>
         <div className='header-bottom'>
-          <button className='head-btn'>About us</button>
+          <button className='head-btn' onClick={() =>navigate('/Aboutus')}>About us</button>
           <button className='head-btn' onClick={handleClick}>{loginbutton}</button>
           <button className='head-btn' onClick={handleSetting}>Settings</button>
         </div>

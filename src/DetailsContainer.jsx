@@ -6,6 +6,7 @@ import User from './User.jsx';
 import Login from './Login.jsx';
 import Setting from './Setting.jsx';
 import DailyChallenge from './DailyChallenge.jsx';
+import Aboutus from './Aboutus.jsx';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
 function DetailsContainer() {
@@ -59,6 +60,7 @@ function DetailsContainer() {
         <Route path='/Login' element={<Login />} />
         <Route path='/Setting' element={<Setting setTheme={setTheme} theme = {theme} />} />
         <Route path='/DailyChallenge' element={<DailyChallenge />} />
+        <Route path='/Aboutus' element={<Aboutus />} />
       </Routes>
     </BrowserRouter>
   );
