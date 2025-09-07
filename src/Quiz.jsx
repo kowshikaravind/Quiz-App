@@ -33,7 +33,7 @@ function Quiz({ category , totalQuestions}) {
   const buttonText = isLast ? "Finish" : "Next";
 
   async function updateStreak(email) {
-    const res = await fetch("http://localhost:5000/update-streak", {
+    const res = await fetch("https://quiz-app-backend-u344.onrender.com/update-streak", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email }),

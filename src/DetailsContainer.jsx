@@ -22,7 +22,7 @@ function DetailsContainer() {
   console.log(details);
   async function allDetails({ user, email, password }) {
     try {
-      const response = await fetch('http://localhost:5000/register', {
+      const response = await fetch('https://quiz-app-backend-u344.onrender.com/register', {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ user, email, password })
@@ -37,7 +37,7 @@ function DetailsContainer() {
 
   async function fetchDetails() {
     try {
-      const response = await fetch('http://localhost:5000/users');
+      const response = await fetch('https://quiz-app-backend-u344.onrender.com/users');
       const data = await response.json();
       setDetails(data.data);
     } catch (err) {

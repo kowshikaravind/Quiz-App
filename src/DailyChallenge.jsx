@@ -6,11 +6,10 @@ function DailyChallenge() {
   const navigate = useNavigate();
   const [streak, setStreak] = useState(0);
 
-  // Fetch streak on load
   useEffect(() => {
     const userDetails = JSON.parse(localStorage.getItem("userDetails"));
     if (userDetails?.email) {
-      fetch(`http://localhost:5000/get-streak?email=${userDetails.email}`)
+      fetch(`https://quiz-app-backend-u344.onrender.com/get-streak?email=${userDetails.email}`)
         .then(res => res.json())
         .then(data => {
           if (data.success) {
