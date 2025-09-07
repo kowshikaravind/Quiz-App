@@ -345,13 +345,32 @@ body.dark .about-us-container { background-color: #1e1e1e; }
   }
 
   .setting-container {
+    margin-left: 0;
     width: 90%;
     min-height: auto;
     padding: 15px;
     margin: 10px auto;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
+  }
+
+  .profile-container,
+  .theme-container {
+    padding: 10px;
+    gap: 10px;
+    font-size: 14px;
+  }
+
+  .profile-img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .profile-btn,
+  .theme-btn {
+    font-size: 14px;
+    padding: 6px 10px;
   }
 
   .hamberger-menu-content {
@@ -370,13 +389,13 @@ body.dark .about-us-container { background-color: #1e1e1e; }
   .head-btn {
     width: 100%;
     padding: 12px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     border-radius: 8px;
   }
 
   .welcome-user {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
   }
 
   .quiz-container,
@@ -386,7 +405,7 @@ body.dark .about-us-container { background-color: #1e1e1e; }
   .daily-challenge-box {
     width: 90%;
     margin: 10px auto;
-    padding: 20px;
+    padding: 15px;
   }
 
   .header {
@@ -409,6 +428,3 @@ body.dark .about-us-container { background-color: #1e1e1e; }
     width: 100%;
   }
 }
-
-
-
