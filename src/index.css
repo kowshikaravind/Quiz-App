@@ -337,6 +337,16 @@ body.dark .about-us-container { background-color: #1e1e1e; }
 }
 
 @media (max-width: 768px) {
+  .main-content{
+    margin-left: 0;
+    padding: 20px;
+    font-size: 12px;
+    margin-left: 200px;
+  }
+  .setting-container{
+    width:300px;
+    height:20px;
+  }
   .hamberger-menu-content {
     width: 100%;
     padding: 30px;
@@ -351,6 +361,10 @@ body.dark .about-us-container { background-color: #1e1e1e; }
   .welcome-user {
     font-size: 1.2rem;
     margin-bottom: 15px;
+  }
+  .main-content, .quiz-container, .setting-container, .outer-box-app {
+    margin-left: 0;
+    padding: 20px;
   }
 }
 
