@@ -24,9 +24,10 @@ function Login() {
       console.log("Login response:", data);
 
       if (data.success) {
-        localStorage.setItem("user", data.user.user);
+        const userDetails = { user: data.user.user, email: data.user.email };
+        localStorage.setItem("userDetails", JSON.stringify(userDetails));
         alert("Login successful");
-        navigate("/Home", { state: { user: data.user.user } });
+        navigate("/Home", { state: userDetails });
       } else {
         alert(data.message || "Invalid credentials. Please try again.");
       }
@@ -37,7 +38,7 @@ function Login() {
   }
 
   return (
-    <div>
+    <div >
       <h1>Login Page</h1>
       <div className='Login-container'>
         <input

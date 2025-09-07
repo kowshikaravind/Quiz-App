@@ -4,10 +4,21 @@ import App from './App.jsx';
 import Home from './Home.jsx';
 import User from './User.jsx';
 import Login from './Login.jsx';
+import Setting from './Setting.jsx';
+import DailyChallenge from './DailyChallenge.jsx';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
 function DetailsContainer() {
+
   const [details, setDetails] = React.useState([]);
+
+  const [theme , setTheme] = React.useState(localStorage.getItem("theme") || 'light');
+
+  React.useEffect(() => {
+    document.body.className = theme;
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
   console.log(details);
   async function allDetails({ user, email, password }) {
     try {
@@ -46,6 +57,8 @@ function DetailsContainer() {
         <Route path='/Home' element={<Home />} />
         <Route path='/Quiz' element={<App />} />
         <Route path='/Login' element={<Login />} />
+        <Route path='/Setting' element={<Setting setTheme={setTheme} theme = {theme} />} />
+        <Route path='/DailyChallenge' element={<DailyChallenge />} />
       </Routes>
     </BrowserRouter>
   );

@@ -7,7 +7,11 @@ function App() {
   const [countdown, setCountdown] = React.useState(false);
   const [showQuiz, setShowQuiz] = React.useState(false);
   const [category, setCategory] = React.useState('');
-
+  const [totalQuestions, setTotalQuestions] = React.useState(10);
+  if(totalQuestions > 50){
+    setTotalQuestions(50);
+    alert("Maximum number of questions is 50");
+  }
   React.useEffect(() => {
     if (countdown && count > 0) {
       const timer = setTimeout(() => setCount(prev => prev - 1), 1000);
@@ -23,13 +27,13 @@ function App() {
   }
 
   if (showQuiz) {
-    return <Quiz category={category} />;
+    return <Quiz category={category} totalQuestions={totalQuestions} />;
   }
 
   return (
     <div>
       {!countdown && count === 3 && (
-        <div className='outer-box'>
+        <div className='outer-box-app'>
           <h1>Start Quiz</h1>
           <h2>Select Category</h2>
           <div className='category-group'>
@@ -49,11 +53,18 @@ function App() {
                   value={value}
                   onChange={(e) => setCategory(e.target.value)}
                 />
-                {label}
+                <span>{label}</span>
               </label>
             ))}
           </div>
-          <h2>Total Questions : 10</h2>
+          <h2>Total Questions :
+            <input
+              className='total-questions-input'
+              type="number"
+              min="1"
+              value={totalQuestions}
+              onChange={(e) => setTotalQuestions(e.target.value)}
+            /></h2>
           <button className='start-button' onClick={handleStart}>Start</button>
         </div>
       )}

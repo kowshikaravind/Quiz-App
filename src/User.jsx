@@ -20,23 +20,26 @@ function User() {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ user, email, password })
         });
+
         const data = await response.json();
         if (!data.success && data.message === "Email already registered") {
           alert("Email already registered. Please login.");
           navigate("/Login");
-        } else if (data.success) {
-          localStorage.setItem("user", user);
-          navigate("/Home", { state: { user } });
-        } else {
+        }
+        else if (data.success) {
+          const userDetails = { user, email };
+          localStorage.setItem("userDetails", JSON.stringify(userDetails));
+          navigate("/Home", { state: userDetails });
+        }
+        else {
           alert(data.message || "Registration failed.");
         }
       } catch (err) {
-        alert("Server error. Please try again later.", err);
+        alert("Server error. Please try again later.");
         console.error("Error registering:", err);
       }
     }
   }
-
 
   return (
     <div className='user-outer-box'>

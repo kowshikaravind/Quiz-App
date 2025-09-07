@@ -3,21 +3,21 @@ import { useLocation, useNavigate } from 'react-router-dom';
 
 function Home() {
   const location = useLocation();
-  const { user: stateUser } = location.state || {};
-  const [user, setUser] = React.useState(stateUser || localStorage.getItem("user") || "");
-  
+  const { user: stateUser, email: stateEmail } = location.state || {};
+
+  const storedDetails = JSON.parse(localStorage.getItem("userDetails")) || {};
+  const [user, setUser] = React.useState(stateUser || storedDetails.user || "");
+  const [email, setEmail] = React.useState(stateEmail || storedDetails.email || "");
+
   const navigate = useNavigate();
   const loginbutton = user ? 'Logout' : 'Login';
 
   function handleClick() {
     if (user) {
-      localStorage.removeItem("user");
+      localStorage.removeItem("userDetails");
       setUser("");
+      setEmail("");
       navigate("/Login");
-    } else if (loginbutton === 'Logout') {
-      localStorage.removeItem("user");
-      setUser("");
-      navigate("/User");
     } else {
       navigate('/User');
     }
@@ -27,20 +27,25 @@ function Home() {
     if (!user) {
       navigate('/User');
     } else {
-      navigate('/Quiz', { state: { user } });
+      navigate('/Quiz', { state: { user, email } });
     }
+  }
+
+  function handleSetting() {
+    navigate('/Setting', { state: { user, email } });
   }
 
   return (
     <div>
       <div className='header'>
-        <div className='header-left'>
+        <div className='header-top'>
           <p className='welcome-user'>Welcome {user} !</p>
+          <button className='head-btn' onClick={() => navigate('/DailyChallenge')}>Daily Challenge</button>
         </div>
-        <div className='header-right'>
-          <button className='head-btn'>Invite your friends</button>
+        <div className='header-bottom'>
           <button className='head-btn'>About us</button>
           <button className='head-btn' onClick={handleClick}>{loginbutton}</button>
+          <button className='head-btn' onClick={handleSetting}>Settings</button>
         </div>
       </div>
       <div className='main-content'>
