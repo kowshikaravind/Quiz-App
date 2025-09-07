@@ -67,6 +67,9 @@ function User() {
           onChange={(e) => setPassword(e.target.value)}
         />
         <button className='user-next-btn' onClick={handleNext}>Next</button>
+        <p className='user-t0-login' onClick={() => navigate('/Login')} style={{color:"blue"}}>
+          Already have an account? Login here
+        </p>
       </div>
     </div>
   );

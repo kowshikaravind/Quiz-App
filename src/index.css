@@ -159,7 +159,7 @@ body.dark .category-group input[type="radio"]:checked + span {
   justify-content: center;
   align-items: center;
   margin:30px 500px;
-  gap: 60px;
+  gap: 50px;
   padding: 100px 10px;
   border-radius: 10px;
 }
