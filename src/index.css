@@ -305,17 +305,28 @@ body.dark .about-us-container { background-color: #1e1e1e; }
 
 @media (max-width: 768px) {
   .header {
-    position: relative;
-    width: 100%;
-    height: auto;
     flex-direction: row;
-    justify-content: space-between;
-    padding: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
   }
-  .header-top, .header-bottom { flex-direction: row; flex-wrap: wrap; gap: 10px; }
-  .question-box { width: 100%; }
-  .outer-box-app, .user-container, .Login-container, .daily-challenge-box { width: 90%; padding: 20px; }
+
+  .head-btn {
+    width: auto;
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+
+  .header-top, .header-bottom {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+  }
 }
+
 .score-box{
   display: flex;
   flex-direction: column;
