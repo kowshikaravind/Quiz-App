@@ -337,35 +337,78 @@ body.dark .about-us-container { background-color: #1e1e1e; }
 }
 
 @media (max-width: 768px) {
-  .main-content{
+  .main-content {
     margin-left: 0;
-    padding: 20px;
-    font-size: 12px;
-    margin-left: 300px;
+    padding: 15px;
+    font-size: 14px;
+    text-align: center;
   }
-  .setting-container{
-    width:300px;
-    height:20px;
+
+  .setting-container {
+    width: 90%;
+    min-height: auto;
+    padding: 15px;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
+
   .hamberger-menu-content {
-    width: 100%;
-    padding: 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100vh;
+    background: #f4f4f4;
+    padding: 20px;
+    z-index: 999;
+    overflow-y: auto;
+    transition: transform 0.3s ease-in-out;
   }
 
   .head-btn {
     width: 100%;
     padding: 12px;
     font-size: 1.1rem;
+    border-radius: 8px;
   }
 
   .welcome-user {
     font-size: 1.2rem;
     margin-bottom: 15px;
   }
-  .main-content, .quiz-container, .setting-container, .outer-box-app {
-    margin-left: 0;
+
+  .quiz-container,
+  .outer-box-app,
+  .user-container,
+  .Login-container,
+  .daily-challenge-box {
+    width: 90%;
+    margin: 10px auto;
     padding: 20px;
   }
+
+  .header {
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  .header-top,
+  .header-bottom {
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .question-box {
+    width: 100%;
+  }
 }
+
 
 
