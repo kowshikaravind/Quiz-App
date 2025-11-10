@@ -37,7 +37,7 @@ This project demonstrates how user authentication, data fetching, and state mana
 
 **Backend:**  
 - Node.js + Express  
-- Render-hosted backend:[ (add your actual link)](https://quiz-app-backend-u344.onrender.com).
+- Render-hosted backend:[ (Backend posted in render)](https://quiz-app-backend-u344.onrender.com).
 
 **APIs Used:**  
 - [Open Trivia DB API](https://opentdb.com/) for questions.
@@ -47,5 +47,5 @@ Kowshik Aravind K S P
 📧 kowshikaravind4@gmail.com
 
 💼 LinkedIn Profile
-[ (add your actual link)](https://www.linkedin.com/in/kowshik-aravind/)
+[ (LinkedIn)](https://www.linkedin.com/in/kowshik-aravind/)
 ....................................................................................................................................................................................................................
