@@ -1,12 +1,51 @@
-# React + Vite
+# 🎯 QuizArena - React Quiz Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack **Quiz Application** built with **React** on the frontend and a **Node.js + Express backend** (deployed on Render).  
+This project demonstrates how user authentication, data fetching, and state management work together in a modern full-stack web app.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- 🔐 **User Authentication**  
+  Register and log in using your email and password. User details are stored in `localStorage`.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🧠 **Dynamic Quiz Generation**  
+  Fetches quiz questions dynamically from the [Open Trivia Database API](https://opentdb.com/).
+
+- 🏁 **Score Tracking**  
+  Displays score and total number of questions after completion.
+
+- 🔥 **Daily Challenge Mode**  
+  Adds an interactive element with a daily quiz streak feature.
+
+- ⚙️ **Settings Page**  
+  - View your profile details (name & email).  
+  - Switch between **Light** and **Dark** themes.
+
+- 📱 **Responsive Design**  
+  Built with clean CSS for mobile and desktop views.
+
+---
+
+## 🧩 Tech Stack
+
+**Frontend:**  
+- React (Hooks, Router)  
+- Fetch API for backend communication  
+- Local Storage for session management  
+
+**Backend:**  
+- Node.js + Express  
+- Render-hosted backend:[ (add your actual link)](https://quiz-app-backend-u344.onrender.com).
+
+**APIs Used:**  
+- [Open Trivia DB API](https://opentdb.com/) for questions.
+
+
+Kowshik Aravind K S P
+📧 kowshikaravind4@gmail.com
+
+💼 LinkedIn Profile
+[ (add your actual link)](https://www.linkedin.com/in/kowshik-aravind/)
+....................................................................................................................................................................................................................
